@@ -17,13 +17,32 @@ namespace CowCulator
         {
             InitializeComponent();
             farmer = new Farmer(15, 30);
-
+            UpdateLabel();
 
         }
 
 
         class Farmer
         {
+
+            private string cow ;
+            public string Cow
+            {
+                get
+                {
+                    return cow;
+                }
+                set
+                {
+                    cow = value;
+                
+                   
+
+                }
+            }
+
+
+    
 
             public Farmer(int numberOfCows, int feedMultiplier)
             {
@@ -48,29 +67,44 @@ namespace CowCulator
                 {
                     numberOfCows = value;
                     BagsOfFeed = numberOfCows * FeedMultiplier;
+                    cow = "I need" + BagsOfFeed + "bags of feed for " + value + "cows.";
                 }
 
             }
 
 
+
         }
 
 
+
+        private void UpdateLabel()
+        {
+            lblCow.Text = farmer.Cow;
+
+        }
    
 
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
+
             farmer.NumberOfCows = (int)numericUpDown1.Value;
+            UpdateLabel();
 
         }
 
         private void calculate_Click(object sender,EventArgs e)
         {
-            Console.WriteLine("I need {0} bags of feed for {1} cows", 
-                farmer.BagsOfFeed, farmer.NumberOfCows);
 
-        }
+
+
+
+
+        //Console.WriteLine("I need {0} bags of feed for {1} cows", 
+        //        farmer.BagsOfFeed, farmer.NumberOfCows);
+
+    }
 
         private void Form1_Load(object sender, EventArgs e)
         {
