@@ -31,6 +31,8 @@
             this.calculate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCow = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,11 +79,33 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(66, 143);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Cowculated Output";
+            // 
+            // lblCow
+            // 
+            this.lblCow.AutoSize = true;
+            this.lblCow.BackColor = System.Drawing.SystemColors.Window;
+            this.lblCow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCow.Location = new System.Drawing.Point(93, 170);
+            this.lblCow.MinimumSize = new System.Drawing.Size(100, 27);
+            this.lblCow.Name = "lblCow";
+            this.lblCow.Size = new System.Drawing.Size(100, 27);
+            this.lblCow.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Controls.Add(this.lblCow);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.calculate);
@@ -99,6 +123,8 @@
         private System.Windows.Forms.Button calculate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCow;
     }
 }
 
