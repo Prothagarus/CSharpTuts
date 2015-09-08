@@ -16,7 +16,7 @@ namespace CowCulator
         public Form1()
         {
             InitializeComponent();
-            farmer = new Farmer(15, 33);
+            farmer = new Farmer(15, 30);
 
 
         }
